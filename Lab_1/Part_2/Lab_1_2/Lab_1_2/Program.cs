@@ -17,9 +17,9 @@ namespace Lab_1_2
             {
                 flag = false;
                 Console.Write("Путь к исходному файлу: ");
-                string strIn = @"C:\Users\Seashell\Desktop\Универ\CS\Lab_1\Part_2\1.txt";//@Console.ReadLine();
+                string strIn = @Console.ReadLine();
                 Console.Write("Путь к закодированому файлу: ");
-                string strOut = @"C:\Users\Seashell\Desktop\Универ\CS\Lab_1\Part_2\2.txt";//@Console.ReadLine();
+                string strOut = @Console.ReadLine();
                 ConvertToBase64(strIn, strOut);
                 Console.ReadKey();
             }
@@ -33,8 +33,7 @@ namespace Lab_1_2
             int k = -1;
             Int64 threeOctets = 0;
             // kak tebe takoe,
-            ilon mask /*???*/
-                = 16515072; //111111 000000 000000 000000
+            ilon mask /*???*/;
 
             while (r.BaseStream.Position != r.BaseStream.Length)
             {
@@ -57,8 +56,7 @@ namespace Lab_1_2
                     }
                 }
                 threeOctets >>= 8;
-
-                //mask = 16515072; //111111 000000 000000 000000
+                
                 mask = 63; // 000000 000000 000000 111111
 
                 for (int i = 3; i >= 0; i--)
